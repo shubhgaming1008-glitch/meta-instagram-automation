@@ -27,52 +27,52 @@ const PRESETS = [
     id: 'link_in_bio',
     emoji: '🔗',
     title: 'Link in Bio',
-    desc: 'Jab koi "link" comment kare, seedha DM mein link bhejo',
+    desc: 'Send a link via DM when someone comments "link"',
     keyword: 'link',
-    dm: 'Yahan hai tumhara link 👇\n[LINK]',
-    commentReply: 'DM check karo! 📩',
+    dm: 'Here is your link 👇\n[LINK]',
+    commentReply: 'Check your DM! 📩',
   },
   {
     id: 'price_inquiry',
     emoji: '💰',
     title: 'Price/Rate Inquiry',
-    desc: 'Jab koi "price" ya "rate" puche, details DM karo',
-    keyword: 'price,rate,cost,kitna',
-    dm: 'Hmare rates ke baare mein jaanne ke liye DM check karo! 💬',
-    commentReply: 'DM kiya hai tumhe! Check karo 📩',
+    desc: 'Send pricing details when someone asks for "price" or "rate"',
+    keyword: 'price,rate,cost,how much',
+    dm: 'Check your DM for our pricing details! 💬',
+    commentReply: 'Sent you a DM! Check it out 📩',
   },
   {
     id: 'giveaway',
     emoji: '🎁',
     title: 'Giveaway Entry',
-    desc: 'Giveaway mein "join" likhne walo ko confirm karo',
+    desc: 'Confirm entry for users who comment "join" or "enter"',
     keyword: 'join,enter,participate',
-    dm: '🎉 Tumhara giveaway entry confirm ho gaya! Winner announce hoga soon.',
-    commentReply: 'Entry ho gayi! ✅ DM check karo.',
+    dm: '🎉 Your giveaway entry is confirmed! Stay tuned for results.',
+    commentReply: 'Entry confirmed! ✅ Check your DM.',
   },
   {
     id: 'free_resource',
     emoji: '📚',
     title: 'Free Resource / PDF',
-    desc: 'Jab koi "free" ya "send" kare, resource DM karo',
-    keyword: 'free,send,chahiye,bhejo',
-    dm: 'Yahan hai tumhara free resource 🎯\n[LINK]',
-    commentReply: 'DM kar diya! Check karo 📩',
+    desc: 'Send a resource when someone comments "free" or "send"',
+    keyword: 'free,send,want,resource',
+    dm: 'Here is your free resource 🎯\n[LINK]',
+    commentReply: 'Sent via DM! Check it out 📩',
   },
   {
     id: 'collab',
     emoji: '🤝',
     title: 'Collaboration Request',
-    desc: 'Jab koi "collab" likhhe, contact info DM karo',
+    desc: 'Send contact info when someone comments "collab"',
     keyword: 'collab,collaboration,partner',
-    dm: 'Collab ke liye interested ho? Yahan detail bhejo:\n[EMAIL/FORM LINK]',
-    commentReply: 'DM kar diya! Baat karte hai 🙌',
+    dm: 'Interested in a collab? Send your details here:\n[EMAIL/FORM LINK]',
+    commentReply: 'Sent you a DM! Let\'s talk 🙌',
   },
   {
     id: 'custom',
     emoji: '✏️',
     title: 'Custom Automation',
-    desc: 'Apni marzi se trigger aur reply set karo',
+    desc: 'Set your own trigger and custom reply',
     keyword: '',
     dm: '',
     commentReply: '',
@@ -95,7 +95,7 @@ export default function Posts() {
       if (active.length > 0) {
         setSelectedAccount(active[0])
       }
-    }).catch(() => setError('Instagram account nahi mila. Pehle Settings mein Connect karo.'))
+    }).catch(() => setError('Instagram account not found. Please connect your account in Settings first.'))
   }, [])
 
   useEffect(() => {
@@ -142,7 +142,7 @@ export default function Posts() {
           📱 Posts & Reels
         </h1>
         <p style={{ color: '#aaa', marginTop: '6px', fontSize: '14px' }}>
-          Apni posts dekho aur seedha wahan se automation banao
+          View your posts and create automations directly from them
         </p>
       </div>
 
@@ -306,8 +306,8 @@ export default function Posts() {
       {!loading && !error && posts.length === 0 && selectedAccount && (
         <div style={{ textAlign: 'center', padding: '80px 20px', color: '#555' }}>
           <div style={{ fontSize: '60px', marginBottom: '16px' }}>📭</div>
-          <div style={{ fontSize: '18px', fontWeight: 600, color: '#777' }}>Koi post nahi mila</div>
-          <div style={{ fontSize: '14px', marginTop: '8px' }}>Is account par koi post nahi hai ya access nahi mila.</div>
+          <div style={{ fontSize: '18px', fontWeight: 600, color: '#777' }}>No posts found</div>
+          <div style={{ fontSize: '14px', marginTop: '8px' }}>This account has no posts or access was denied.</div>
         </div>
       )}
 
@@ -315,12 +315,12 @@ export default function Posts() {
       {!loading && !error && accounts.length === 0 && (
         <div style={{ textAlign: 'center', padding: '80px 20px' }}>
           <div style={{ fontSize: '60px', marginBottom: '16px' }}>🔗</div>
-          <div style={{ fontSize: '18px', fontWeight: 600, color: '#777', marginBottom: '16px' }}>Instagram connect nahi hai</div>
+          <div style={{ fontSize: '18px', fontWeight: 600, color: '#777', marginBottom: '16px' }}>Instagram is not connected</div>
           <button
             onClick={() => navigate('/settings')}
             style={{ background: 'linear-gradient(135deg, #a855f7, #6366f1)', border: 'none', borderRadius: '10px', color: '#fff', padding: '12px 28px', cursor: 'pointer', fontWeight: 700, fontSize: '15px' }}
           >
-            Settings mein jaake Connect karo
+            Connect your account in Settings
           </button>
         </div>
       )}
