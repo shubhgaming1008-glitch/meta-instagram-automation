@@ -1,0 +1,20 @@
+# .gitignore
+.env
+*.pyc
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+node_modules/
+.vite/
+*.local
+.DS_Store
+Thumbs.db
+pgdata/
+redisdata/
+*.log
+celerybeat-schedule
+celerybeat.pid
+.coverage
+htmlcov/
