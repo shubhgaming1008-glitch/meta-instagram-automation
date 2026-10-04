@@ -13,6 +13,15 @@
     <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
     <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery">
   </p>
+  
+  <br/>
+  
+  <img src="assets/1.png" alt="App Screenshot 1" width="800" style="border-radius: 12px; margin-bottom: 20px;">
+  <br/>
+  <img src="assets/2.png" alt="App Screenshot 2" width="800" style="border-radius: 12px; margin-bottom: 20px;">
+  <br/>
+  <img src="assets/3.png" alt="App Screenshot 3" width="800" style="border-radius: 12px; margin-bottom: 20px;">
+  
 </div>
 
 <br/>
