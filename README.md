@@ -124,7 +124,7 @@ If you want to put this on the internet, here is my recommended setup:
 
 I spent countless nights coding this platform and reverse-engineering the Meta API so you don't have to! If this project helped you save time, get more leads, or you just want to say thanks, I would incredibly appreciate your support. 
 
-<a href="https://www.buymeacoffee.com/yourusername" target="_blank">
+<a href="#" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 180px !important;" >
 </a>
 
