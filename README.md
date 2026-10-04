@@ -32,6 +32,21 @@ I got tired of manually replying to every single "Link please!" comment. So, I b
 
 ---
 
+## 🛠️ How It Works (The Workflow)
+
+Using the platform is extremely straightforward. Here is exactly how it automates your Instagram:
+
+1. **🔗 Connect Meta OAuth**: You log in with Facebook and select the Instagram Business account you want to automate. The system securely saves your tokens using Fernet encryption.
+2. **🏗️ Build a Flow**: Head over to the **Flow Builder**. It’s a node-based visual canvas. You can drag and drop different "Blocks":
+   - **Trigger Block**: When a user comments "PRICE", start the flow.
+   - **Action Block**: Send them a DM saying "Here is the price list!".
+   - **Condition Block**: (Coming Soon) Check if they are actually following you before sending the link!
+3. **🚀 Go Live**: Once you activate the automation, the backend registers Webhooks with Meta.
+4. **🤖 Automation in Action**: When a user comments on your Reel, Meta sends a webhook to the FastAPI backend. Celery picks up the task, matches the keyword, and instantly fires back a DM using the Graph API.
+5. **📈 Track Analytics**: Every single message sent, opened, and link clicked is logged. You can see real-time charts in your Dashboard.
+
+---
+
 ## 🛠 What's Under the Hood?
 
 I wanted this to be fast and scale easily, so here is the tech stack:
